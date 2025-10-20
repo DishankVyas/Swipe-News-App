@@ -1,0 +1,14 @@
+## This file contains machine-specific properties for the Gradle build toolkit.
+# For more information about this file, see:
+# http://developer.android.com/guide/developing/tools/project-setup.html
+
+# Location of the Android SDK (automatically added by Android Studio)
+# sdk.dir=/path/to/your/Android/sdk
+
+## API Keys Configuration
+# To run this project, you need to add your API keys below.
+# Copy this file to 'local.properties' and fill in your actual API keys.
+
+# NewsAPI Key
+# Get your free API key at: https://newsapi.org/register
+NEWS_API_KEY=your_news_api_key_here

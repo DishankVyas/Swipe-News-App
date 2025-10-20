@@ -1,0 +1,67 @@
+/**
+ * Firebase Firestore Security Rules for SwipeNews
+ *
+ * Copy and paste these rules in the Firebase Console:
+ * 1. Go to Firebase Console > Firestore Database > Rules
+ * 2. Replace the existing rules with the rules below
+ * 3. Click "Publish"
+ *
+ * These rules ensure:
+ * - Users must be authenticated to access any data
+ * - Users can only read/write their own saved articles
+ * - Complete data isolation between users
+ * - No public read/write access
+ */
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can only read/write their own saved articles
+    match /users/{userId}/saved_articles/{article} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
+/**
+ * Rule Explanation:
+ *
+ * 1. rules_version = '2': Uses the latest version of security rules syntax
+ *
+ * 2. match /users/{userId}/saved_articles/{article}:
+ *    - Matches documents in the path: users/{userId}/saved_articles/{articleId}
+ *    - {userId} is a wildcard that captures the user ID
+ *    - {article} is a wildcard that captures the article ID
+ *
+ * 3. allow read, write: if request.auth != null && request.auth.uid == userId:
+ *    - request.auth != null: Ensures user is authenticated
+ *    - request.auth.uid == userId: Ensures the authenticated user's UID matches the {userId} in the path
+ *    - This means users can ONLY access documents under their own UID
+ *
+ * 4. match /{document=**}:
+ *    - Matches any other path not covered above
+ *    - allow read, write: if false: Denies all access
+ *    - This is a security best practice - deny by default
+ *
+ * Example Usage:
+ * - User with UID "abc123" can read/write: /users/abc123/saved_articles/article_001
+ * - User with UID "abc123" CANNOT read/write: /users/xyz789/saved_articles/article_001
+ * - Unauthenticated users CANNOT access any documents
+ *
+ * Testing Security Rules:
+ * 1. In Firebase Console, go to Firestore > Rules
+ * 2. Click on the "Rules Playground" tab
+ * 3. Test with authenticated user:
+ *    - Set auth.uid to a test value like "testUser123"
+ *    - Try to read: /users/testUser123/saved_articles/article_001 (Should succeed)
+ *    - Try to read: /users/otherUser456/saved_articles/article_001 (Should fail)
+ * 4. Test without authentication:
+ *    - Clear auth.uid
+ *    - Try to read any document (Should fail)
+ */

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">SwipeNews</string>
+
+    <!-- Login Activity -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+
+    <!-- Main Activity -->
+    <string name="swipe_news">SwipeNews</string>
+    <string name="no_articles">No articles available.\nPull to refresh!</string>
+    <string name="article_saved">Article saved!</string>
+    <string name="article_skipped">Article skipped</string>
+
+    <!-- Saved Activity -->
+    <string name="saved_articles">Saved Articles</string>
+    <string name="no_saved_articles">No saved articles yet.\nSwipe right on articles to save them!</string>
+    <string name="article_removed">Article removed</string>
+
+    <!-- Settings Activity -->
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="logout">Logout</string>
+    <string name="api_key">NewsAPI Key</string>
+    <string name="save_api_key">Save API Key</string>
+
+    <!-- Categories -->
+    <string name="category_general">General</string>
+    <string name="category_technology">Technology</string>
+    <string name="category_business">Business</string>
+    <string name="category_sports">Sports</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_health">Health</string>
+    <string name="category_science">Science</string>
+
+    <!-- Actions -->
+    <string name="refresh">Refresh</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+
+    <!-- Messages -->
+    <string name="loading">Loading...</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Firebase Web Client ID - Add your actual client ID here -->
+    <string name="default_web_client_id" translatable="false">557492843333-14lfm02dmnat1vrl7agkfi6rav3abqvf.apps.googleusercontent.com</string>
+</resources>

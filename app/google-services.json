@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557492843333",
+    "project_id": "madting-749ff",
+    "storage_bucket": "madting-749ff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557492843333:android:27eda3f6e08c5bccc7442c",
+        "android_client_info": {
+          "package_name": "com.nmims.bigmanting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBskZ3WcRYOuXpZH-S4bMb6xe30O2ezXPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
