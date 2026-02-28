@@ -105,7 +105,7 @@ app/src/main/java/com/nmims/bigmanting/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/DishankVyas/Swipe-News-App
    cd bigmanting
    ```
 
@@ -260,13 +260,6 @@ For a complete demo script with talking points, see [DEMO_SCRIPT.md](DEMO_SCRIPT
 
 See [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) for more troubleshooting tips.
 
-## License 📄
-
-This project is for educational purposes as part of a Mobile Application Development course.
-
-## Author 👨‍💻
-
-Built with ❤️ for NMIMS Mobile Application Development project
 
 ## Acknowledgments 🙏
 
